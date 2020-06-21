@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ストップウォッチ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="site-narrow">
+            <h1 class="header_title">STOPWATCH</h1>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="stopwatch_container">
+                <div class="time-area" id="timerLabel">
+                    <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+                </div>
+                <div class="btn-area">
+                    <button class="btn btn-reset" onclick="reset()" value="RESET" id="resetBtn">リセット</button>
+                    <button class="btn btn-stop" onclick="stop()" value="STOP" id="stopBtn">停止</button>
+                    <button class="btn btn-start" onclick="start()" value="START" id="startBtn">開始</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/stopwatch.js"></script>
+</body>
+</html>
