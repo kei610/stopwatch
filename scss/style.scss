@@ -1,0 +1,52 @@
+@import "reset";
+
+.header{
+    background-color: rgb(164, 156, 156);
+    // height: 80px;
+    // line-height: 80px;
+    padding: 20px 10px;
+}
+
+// .container{
+    
+// }
+.stopwatch_container{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.time-area{
+    padding: 50px 0;
+    font-size: 100px;
+}
+
+.btn-area{
+    padding: 30px 0;
+}
+.btn{
+    display: inline-block;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    font-size: 20px;
+    outline: none;
+    border: 5px solid #000;
+    background-color: #444;
+    color: $c-white;
+    cursor: pointer;
+}
+.btn + .btn{
+    margin-left: 20px;
+}
+$c-reset: rgb(86, 180, 78);
+$c-start: rgb(33, 184, 230);
+$c-stop: rgb(230, 33, 33);
+.btn-reset{
+    border-color: $c-reset;
+}
+.btn-stop{
+    border-color: $c-stop;
+}
+.btn-start{
+    border-color: $c-start;
+}

@@ -1,0 +1,20 @@
+body,h1,p{
+    margin: 0;
+    padding: 0;
+}
+
+$c-black: #333;
+$c-white:#F4F5F7;
+
+body{
+    line-height: 1.5;
+    box-sizing: border-box;
+    background-color: $c-white;
+    color: $c-black;
+}
+
+.site-narrow{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
