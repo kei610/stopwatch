@@ -1,6 +1,9 @@
 
 'use strict';
 
+// 60分を超えたら1時間に変換する
+// 開始と停止を切り替える
+
 const timerLabel = document.getElementById('timerLabel');
 const resetBtn = document.getElementById('resetBtn');
 const startBtn = document.getElementById('startBtn');

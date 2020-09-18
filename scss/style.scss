@@ -1,52 +1,143 @@
 @import "reset";
 
+// header
 .header{
+    max-width: 100%;
     background-color: rgb(164, 156, 156);
     // height: 80px;
     // line-height: 80px;
     padding: 20px 10px;
+    &_title{
+        margin-left: 10px;
+        @include media(sp){
+            margin-left: 40px;
+        }
+    }
 }
 
-// .container{
-    
-// }
-.stopwatch_container{
-    text-align: center;
-    margin: 50px 0;
+.main{
+    background-color: #ddd;
+    width: 100%;
+
+}
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0 auto;
+    max-width: 980px;
+    @include media(sp){
+        display: block;
+    }
 }
 
-.time-area{
-    padding: 50px 0;
-    font-size: 100px;
+// sidebar
+.sidebar{
+    background-color: $c-white;
+    max-width: 380px;
+    padding: 30px;
+    @include media(sp){
+        display: block;
+        max-width: 100%;
+        padding: 30px 50px;
+    }
 }
 
-.btn-area{
+.task_list{
+    .task_item{
+        padding: 20px 0;
+        border-bottom: 1px dotted #000;
+    }
+    .task_link{
+        display: block;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+
+.form{
+    // display: flex;
+    margin-top: 20px;
     padding: 30px 0;
+    &_item{
+        display: block;
+        padding: 10px 0;
+        .input_task{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .input_time{
+            width: 30%;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+    }
+    .btn_container{
+        text-align: right;
+        padding: 20px 0;
+        .submit{
+            width: 50px;
+            height: 50px;
+        }
+    }
 }
-.btn{
-    display: inline-block;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    font-size: 20px;
-    outline: none;
-    border: 5px solid #000;
-    background-color: #444;
-    color: $c-white;
-    cursor: pointer;
+
+
+// main
+.main_contents{
+    max-width: 600px;
+    margin-left: 50px;
+    padding: 20px 50px;
+    @include media(sp){
+        display: block;
+        flex: 1;
+        margin: 0;
+    }
 }
-.btn + .btn{
-    margin-left: 20px;
+
+.task_area{
+    padding: 20px 0 0;
+    .task_title{
+        // padding: 20px 0 0;
+        font-size: 50px;
+    }
 }
-$c-reset: rgb(86, 180, 78);
-$c-start: rgb(33, 184, 230);
-$c-stop: rgb(230, 33, 33);
-.btn-reset{
-    border-color: $c-reset;
+
+.time_area{
+    padding: 20px 0;
+    font-size: 80px;
 }
-.btn-stop{
-    border-color: $c-stop;
+
+.btn_area{
+    margin-top: 20px;
+    padding: 20px 0 50px;
+    @include media(sp){
+        text-align: center;
+    }
+    .btn-complete{
+        @include btn;
+    }
+    .btn-reset{
+        @include btn;
+        border-color: $c-reset;
+    }
+    .btn-stop{
+        @include btn;
+        border-color: $c-stop;
+    }
+    .btn-start{
+        @include btn;
+        border-color: $c-start;
+    }
 }
-.btn-start{
-    border-color: $c-start;
+
+
+// footer
+.footer{
+    background-color: rgb(164, 156, 156);
+    min-height: 80px;
+    max-width: 100%;
 }

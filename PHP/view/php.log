@@ -1,0 +1,7 @@
+[11-Sep-2020 07:19:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Applications/MAMP/htdocs/stopwatch/PHP/config/function.php:34
+Stack trace:
+#0 /Applications/MAMP/htdocs/stopwatch/PHP/config/function.php(34): PDO->__construct('mysql:dbname=st...', 'root', 'root', Array)
+#1 /Applications/MAMP/htdocs/stopwatch/PHP/config/function.php(75): dbConnect()
+#2 /Applications/MAMP/htdocs/stopwatch/PHP/view/index.php(10): getTask()
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/stopwatch/PHP/config/function.php on line 34
